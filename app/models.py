@@ -13,72 +13,32 @@ class Item(models.Model):
     """
 
     # サンプル項目1 文字列
-    sample_1 = models.CharField(
-        verbose_name='サンプル項目1 文字列',
-        max_length=20,
+    myinput = models.CharField(
+        verbose_name='入力文字',
+        max_length=5,
         blank=True,
         null=True,
+        # validators=[validators.RegexValidator(
+        #     regex=u'^[a-Z]+$',
+        #     message='半角英語で入力してください'
+        # )]
     )
 
     # サンプル項目2 メモ
-    sample_2 = models.TextField(
-        verbose_name='サンプル項目2 メモ',
+    myresult = models.CharField(
+        verbose_name='結果',
+        max_length=5,
         blank=True,
         null=True,
-    )
-
-    # サンプル項目3 整数
-    sample_3 = models.IntegerField(
-        verbose_name='サンプル項目3 整数',
-        blank=True,
-        null=True,
-    )
-
-    # サンプル項目4 浮動小数点
-    sample_4 = models.FloatField(
-        verbose_name='サンプル項目4 浮動小数点',
-        blank=True,
-        null=True,
-    )
-
-    # サンプル項目5 固定小数点
-    sample_5 = models.DecimalField(
-        verbose_name='サンプル項目5 固定小数点',
-        max_digits=5,
-        decimal_places=2,
-        blank=True,
-        null=True,
-    )
-
-    # サンプル項目6 ブール値
-    sample_6 = models.BooleanField(
-        verbose_name='サンプル項目6 ブール値',
+        # validators=[validators.RegexValidator(
+        #     regex=u'^[0-2]+$',
+        #     message='ボールは1, ヒットは2, それ以外は0で入力してください. 例:"00102"'
+        # )]
     )
 
     # サンプル項目7 日付
     sample_7 = models.DateField(
         verbose_name='サンプル項目7 日付',
-        blank=True,
-        null=True,
-    )
-
-    # サンプル項目8 日時
-    sample_8 = models.DateTimeField(
-        verbose_name='サンプル項目8 日時',
-        blank=True,
-        null=True,
-    )
-
-    # サンプル項目9 選択肢（固定）
-    sample_9_choice = (
-        (1, '選択１'),
-        (2, '選択２'),
-        (3, '選択３'),
-    )
-
-    sample_9 = models.IntegerField(
-        verbose_name='サンプル項目9_選択肢（固定）',
-        choices=sample_9_choice,
         blank=True,
         null=True,
     )

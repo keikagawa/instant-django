@@ -1,49 +1,17 @@
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>1_文字列</p>
+        <p>入力文字</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{  item.sample_1|default_if_none:"未入力"  }}</p>
+        <p>{{  item.myinput|default_if_none:"未入力"  }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>2_メモ</p>
+        <p>結果</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{  item.sample_2|default_if_none:"未入力" }}</p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-5 col-sm-3">
-        <p>3_整数</p>
-    </div>
-    <div class="col-7 col-sm-9">
-        <p>{{  item.sample_3|default_if_none:"未入力" }}</p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-5 col-sm-3">
-        <p>4_浮動小数点</p>
-    </div>
-    <div class="col-7 col-sm-9">
-        <p>{{  item.sample_4|default_if_none:"未入力" }}</p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-5 col-sm-3">
-        <p>5_固定小数点</p>
-    </div>
-    <div class="col-7 col-sm-9">
-        <p>{{  item.sample_5|default_if_none:"未入力" }}</p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-5 col-sm-3">
-        <p>6_ブール値</p>
-    </div>
-    <div class="col-7 col-sm-9">
-        <p>{{ item.sample_6|yesno:"はい,いいえ" }}</p>
+        <p>{{  item.myresult|default_if_none:"未入力" }}</p>
     </div>
 </div>
 <div class="row">
